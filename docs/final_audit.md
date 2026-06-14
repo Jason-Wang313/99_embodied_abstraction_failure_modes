@@ -1,12 +1,15 @@
 # Final Audit
 
-1. Chosen thesis: Embodied Abstraction Failure Modes explores `Find where symbolic or language abstractions erase action-critical mechanics.` for abstraction in robot planning.
-2. ICLR-main decision: KILL_ARCHIVE.
-3. Submission-hardening version: v3.
-4. Reason: synthetic-only, template-generated evidence cannot support ICLR main-conference robotics claims.
-5. Closest hostile prior work: see `docs/hostile_prior_work.md`, `docs/hostile_prior_work_100_cards.csv`, and `docs/hostile_reviewer_response.md`.
-6. Reproducibility: synthetic code runs, but no real robot or high-fidelity benchmark is reproduced.
-7. Claim-validity status: main-conference claims killed; archive memo retained.
-8. Exact Downloads PDF path: `C:/Users/wangz/Downloads/99.pdf`
-9. GitHub URL: https://github.com/Jason-Wang313/99_embodied_abstraction_failure_modes
-10. Confirmation: no visible Desktop copy was requested or made.
+1. Paper: 99 `embodied_abstraction_failure_modes`.
+2. Submission-hardening version: v4.
+3. Last audit timestamp: 2026-06-14 22:25:02 +01:00.
+4. Thesis tested: mechanics-aware auditing for symbolic/language abstraction failures.
+5. Evidence produced: 5 tasks x 7 abstraction-failure families x 5 splits x 9 methods, seven seeds, ablations, stress sweep, pairwise tests, and failure cases.
+6. Terminal decision: KILL_ARCHIVE.
+7. Main empirical reason: `grounded_geometric_tamp` beats the proposed method on combined-stress task success, 0.603 vs 0.552.
+8. Mechanism reason: false refinement alarms are excessive and multiple ablations match or beat full on success/regret.
+9. Hostile prior-work pressure: VLA agents, neuro-symbolic predicates, active relational abstraction, LLM-TAMP failure reasoning, runtime monitoring, and grounded TAMP already cover the obvious novelty space.
+10. Reproducibility: `python src/run_experiment.py` regenerates all v4 CSVs, LaTeX tables, figures, and summary text.
+11. Exact Downloads PDF path: `C:/Users/wangz/Downloads/99.pdf`.
+12. GitHub URL: https://github.com/Jason-Wang313/99_embodied_abstraction_failure_modes
+13. Desktop policy: no visible Desktop PDF copy should be made.

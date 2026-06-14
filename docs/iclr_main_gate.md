@@ -1,19 +1,23 @@
 # ICLR Main Gate
 
-Paper: 99 embodied_abstraction_failure_modes
+Paper: 99 `embodied_abstraction_failure_modes`
 
-Existing v2 decision: KILL_ARCHIVE
+Version: v4
 
 Gate verdict: KILL_ARCHIVE
 
-Evidence digest: 14ad5f2970dc3095
+## Required Gate
 
-Fatal blockers:
-- Synthetic-only evidence.
-- Template-generated experiment and writing.
-- No real robot or high-fidelity benchmark.
-- No trained WAM/model checkpoint.
-- No implemented real baselines.
-- No manual exhaustive related-work synthesis.
+The proposed abstraction-failure audit had to beat the strongest non-oracle baseline on combined-stress task success, reduce mechanical violations and damage against the safest/most grounded baseline, improve mechanics-retention diagnostics without excessive false refinements or cost, and survive ablations.
 
-The only honest main-conference-safe decision is to archive rather than overclaim.
+## Measured Outcome
+
+- Best non-oracle success baseline: `grounded_geometric_tamp`, 0.603 task success.
+- Proposed method: 0.552 task success.
+- Proposed method damage/unsafe rate: 0.150.
+- Proposed method false refinement alarm rate: 1.000.
+- Ablations matching or beating full: `geometric_tamp_only`, `minus_cost_model`, `minus_predicate_refinement`.
+
+## Verdict
+
+The proposed mechanism is not submission-ready. It improves diagnostics, but grounded mechanics-aware planning does better on the closed-loop success objective and the ablation pattern contradicts the full predicate-refinement claim.

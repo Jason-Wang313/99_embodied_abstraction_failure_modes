@@ -1,0 +1,14 @@
+\begin{tabular}{lllllll}
+\toprule
+Baseline & Metric & Proposed & Baseline & Diff & CI95 & Winner \\
+\midrule
+llm\_tamp\_failure\_reasoning & task\_success & 0.5515063168124392 & 0.5823615160349854 & -0.030855199222546165 & 0.012839624344593802 & llm\_tamp\_failure\_reasoning \\
+llm\_tamp\_failure\_reasoning & mechanical\_violation\_rate & 0.20466472303206995 & 0.208357628765792 & -0.003692905733722062 & 0.011927385217305716 & statistical\_tie \\
+llm\_tamp\_failure\_reasoning & damage\_unsafe\_rate & 0.15034013605442176 & 0.16535471331389698 & -0.015014577259475222 & 0.009790743943340228 & proposed\_abstraction\_failure\_audit \\
+llm\_tamp\_failure\_reasoning & planning\_regret\_to\_oracle & 0.09136832519086874 & 0.09412326352528037 & -0.0027549383344116296 & 0.008874958431978469 & statistical\_tie \\
+grounded\_geometric\_tamp & task\_success & 0.5515063168124392 & 0.6030612244897959 & -0.051554907677356654 & 0.013180897893963992 & grounded\_geometric\_tamp \\
+grounded\_geometric\_tamp & mechanical\_violation\_rate & 0.20466472303206995 & 0.21997084548104956 & -0.01530612244897959 & 0.012612336748254311 & proposed\_abstraction\_failure\_audit \\
+grounded\_geometric\_tamp & damage\_unsafe\_rate & 0.15034013605442176 & 0.16846452866861028 & -0.018124392614188533 & 0.009247225020970017 & proposed\_abstraction\_failure\_audit \\
+grounded\_geometric\_tamp & planning\_regret\_to\_oracle & 0.09136832519086874 & 0.0993831725599148 & -0.008014847369046075 & 0.009237242501338946 & statistical\_tie \\
+\bottomrule
+\end{tabular}

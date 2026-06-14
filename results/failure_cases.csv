@@ -1,0 +1,13 @@
+case_id,task,failure_family,seed,task_success,mechanical_violation_rate,damage_unsafe_rate,planning_regret_to_oracle,failure_mode
+1,tool_use_with_hidden_leverage,temporal_precondition_loss,0,0.690476,0.154762,0.130952,0.172491,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+2,deformable_object_packing,temporal_precondition_loss,6,0.452381,0.130952,0.178571,0.171574,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+3,tool_use_with_hidden_leverage,temporal_precondition_loss,1,0.452381,0.190476,0.166667,0.170286,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+4,deformable_object_packing,temporal_precondition_loss,1,0.404762,0.166667,0.095238,0.168406,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+5,tool_use_with_hidden_leverage,temporal_precondition_loss,6,0.392857,0.226190,0.059524,0.165837,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+6,container_insertion_clearance,temporal_precondition_loss,3,0.476190,0.166667,0.119048,0.165670,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+7,deformable_object_packing,temporal_precondition_loss,4,0.476190,0.190476,0.083333,0.164180,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+8,deformable_object_packing,temporal_precondition_loss,5,0.392857,0.107143,0.095238,0.162134,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+9,tool_use_with_hidden_leverage,temporal_precondition_loss,4,0.392857,0.178571,0.190476,0.162079,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+10,deformable_object_packing,temporal_precondition_loss,3,0.440476,0.166667,0.119048,0.161630,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+11,mobile_manipulation_with_occlusion,temporal_precondition_loss,1,0.488095,0.250000,0.107143,0.161374,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+12,tool_use_with_hidden_leverage,temporal_precondition_loss,2,0.416667,0.154762,0.130952,0.161277,the audit refines a mostly temporal nuisance when monitoring would be cheaper

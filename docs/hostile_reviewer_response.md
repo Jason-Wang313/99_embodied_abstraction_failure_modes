@@ -1,26 +1,22 @@
-        # Hostile Reviewer Response
+# Hostile Reviewer Response
 
-        Paper: 99 Embodied Abstraction Failure Modes
+Paper: 99 Embodied Abstraction Failure Modes
 
-        ## Strongest Technical Threats
-        - Integrating Motion Planning in Vision Language Action Agents (2025)
-- Embodied Active Learning of Relational State Abstractions for Bilevel Planning (2023)
-- VisualPredicator: Learning Abstract World Models with Neuro-Symbolic Predicates for Robot Planning (2024)
-- Vision Language Action Models for Embodied Intelligence A Structured Taxonomy Critical Analysis and Future Research Directions (2026)
-- Multimodal AI: PaLM-E's Role in Vision-Language-Robotics & the Future of Efficient Fine-Tuning (2026)
-- Hierarchical Vision Language Action Model Using Success and Failure Demonstrations (2025)
-- Survey of Vision-Language-Action Models for Embodied Manipulation (2025)
-- Scaling Cross-Environment Failure Reasoning Data for Vision-Language Robotic Manipulation (2025)
+## Strongest Technical Threats
 
-        ## ICLR Main Response
-        A hostile ICLR reviewer would be correct to reject this as a main-conference submission. The v2 paper has reproducible synthetic evidence and careful limitations, but it does not contain the real robot, high-fidelity simulator, learned model, or manual related-work depth needed for the ICLR main track.
+- VLA agents with integrated motion planning.
+- Embodied active learning of relational abstractions.
+- Neuro-symbolic predicate learning for robot planning.
+- VLA surveys and structured taxonomies.
+- LLM task-and-motion planning with motion failure reasoning.
+- Corrective LLM planning.
+- Runtime monitoring of generative-policy consistency.
+- Foundation-model-driven robust task planning and failure recovery.
 
-        ## Honest Action
-        The paper is marked `KILL_ARCHIVE`. This avoids converting a generated workshop-style idea into an overstated main-conference claim.
+## Hostile Review
 
-        ## What Would Be Needed To Revive
-        - Real robot or high-fidelity benchmark experiments.
-        - Implemented model and baselines, not synthetic probability tables.
-        - Manual full-paper related-work audit.
-        - Paper-specific writing and figures.
-        - Evidence that the core mechanism is learned and useful under deployment shift.
+A hostile reviewer would ask whether mechanics-aware abstraction auditing improves planning beyond grounded TAMP or LLM-TAMP failure reasoning. The v4 evidence says no for this audit: the proposed method has higher abstraction-failure accuracy but lower combined-stress success than grounded geometric TAMP, and ablations that remove predicate refinement or use geometric TAMP only match or beat full on success/regret.
+
+## Honest Response
+
+We accept the rejection. The evidence suggests that erased mechanics matter, but the full predicate-refinement audit is not the decisive ingredient. The paper should remain an archive unless future hardware or high-fidelity experiments show the full mechanism beating grounded planning and failure-reasoning baselines.

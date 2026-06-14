@@ -4,8 +4,23 @@ Decision: KILL_ARCHIVE
 
 ICLR main-conference readiness: NO.
 
-Reason: The strongest locally available evidence is synthetic and template-generated. The paper lacks real-robot or high-fidelity simulator validation, implemented learned baselines, manual full-paper related-work depth, and paper-specific empirical figures. These are not recoverable without new external experiments or a substantially new research project.
+## Evidence
 
-Honest terminal action: archive/kill for ICLR main. Do not submit this paper to ICLR main in its current form.
+The v4 rebuild replaced the generic scaffold with an executable embodied-abstraction audit. The audit includes strong baselines, ablations, stress tests, uncertainty/calibration metrics, pairwise seed/task/family comparisons, and failure cases.
 
-Revival condition: rebuild as a real empirical robotics paper with implemented model, strong real baselines, manual related work, and deployment evidence.
+Combined-stress headline:
+
+- `grounded_geometric_tamp`: task success 0.603, regret 0.099.
+- `llm_tamp_failure_reasoning`: task success 0.582, regret 0.094.
+- `proposed_abstraction_failure_audit`: task success 0.552, regret 0.091.
+- `oracle_mechanics_preserving_planner`: task success 0.616, regret 0.000.
+
+The proposed method has the best non-oracle abstraction-failure accuracy, but the diagnostic advantage does not translate into decisive closed-loop performance.
+
+## Terminal Reason
+
+The idea is killed because the new evidence is negative for the main claim. A paper arguing that abstraction-failure auditing improves embodied planning cannot be ICLR-main-target when grounded geometric TAMP has higher success and predicate-refinement/geometric ablations match or beat full on success/regret.
+
+## Revival Condition
+
+Revival would require real robot or high-fidelity simulator validation and evidence that the full mechanics-aware abstraction audit beats grounded geometric TAMP, LLM-TAMP failure reasoning, active relational abstraction, and runtime monitoring on task success, mechanical violations, damage, and regret.
