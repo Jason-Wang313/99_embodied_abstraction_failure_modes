@@ -1,13 +1,23 @@
 # Novelty Boundary Map
 
 ## Crowded Territory
-- Bigger data/model scaling.
-- New benchmark only.
-- Generic active learning or uncertainty.
-- Combining a planner with a learned policy without a new state/action object.
 
-## Claimed Boundary
-Embodied abstraction failure modes keeps action-critical alternatives explicit until a physical observation collapses them.
+- VLA agents with motion planning.
+- Neuro-symbolic predicates.
+- Active relational state abstraction.
+- LLM-TAMP failure reasoning.
+- Corrective planning with language models.
+- Runtime monitoring and replanning.
+- Grounded geometric TAMP.
 
-## What Would Falsify The Claim
-If observed-only baselines match the adverse-mode coverage and closed-loop success of the proposed branch-aware mechanism, the paper should be revised or killed.
+## Boundary Tested
+
+The only potentially novel boundary was an explicit abstraction-failure audit that detects erased mechanics and decides whether to refine predicates, query mechanics, switch to TAMP, monitor/replan, or proceed.
+
+## What The v4 Audit Found
+
+The boundary is not strong enough. The proposed method improves failure classification and mechanics-retention recall, but grounded geometric TAMP outperforms it on task success and ablations remove predicate refinement or the cost model without hurting success/regret.
+
+## Boundary Decision
+
+Novelty remains an idea seed, not a submission-ready contribution.

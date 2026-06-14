@@ -1,7 +1,9 @@
 # Novelty Decision
 
-Chosen thesis: Embodied Abstraction Failure Modes turns the seed bet into a mechanism: Find where symbolic or language abstractions erase action-critical mechanics.
+Chosen thesis: mechanics-aware auditing for embodied abstraction failures.
 
-New central mechanism: Embodied abstraction failure modes keeps action-critical alternatives explicit until a physical observation collapses them.
+Decision after v4 evidence: KILL_ARCHIVE.
 
-Decision: proceed as a revise/workshop-strength ICLR-style draft with synthetic but runnable evidence.
+Reason: the claimed novelty is not empirically decisive. The audit shows better abstraction-failure accuracy, but the full mechanism loses to grounded geometric TAMP on task success and ablations remove predicate refinement/cost modeling without hurting success/regret enough.
+
+Future revival would need evidence that the full audit, not merely grounded geometric planning or failure reasoning, causes robust embodied-planning gains.
