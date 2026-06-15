@@ -2,7 +2,7 @@
 
 Paper: 99 `embodied_abstraction_failure_modes`
 
-Version: v4
+Version: v4.1
 
 ## Attack 1: This is just TAMP with extra labels.
 
@@ -14,7 +14,7 @@ Result: Fatal. `minus_predicate_refinement` beats full on success and regret.
 
 ## Attack 3: The cost model is doing harm.
 
-Result: Fatal. `minus_cost_model` matches or beats full on success/regret.
+Result: Fatal. `minus_cost_model` matches or beats full on success/regret, and `minus_predicate_refinement` is stronger than full on both.
 
 ## Attack 4: Monitoring or TAMP handles failures without a mechanics taxonomy.
 
@@ -30,4 +30,4 @@ Result: Still true. This prevents main-conference readiness even if the local re
 
 ## Terminal Action
 
-Mark `KILL_ARCHIVE`. Do not submit as an ICLR-main paper.
+Mark `KILL_ARCHIVE`. Do not submit as an ICLR-main paper. The 2026-06-15 continuation rerun did not change the terminal decision.

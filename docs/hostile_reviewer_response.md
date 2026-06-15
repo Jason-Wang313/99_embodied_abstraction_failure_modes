@@ -15,7 +15,7 @@ Paper: 99 Embodied Abstraction Failure Modes
 
 ## Hostile Review
 
-A hostile reviewer would ask whether mechanics-aware abstraction auditing improves planning beyond grounded TAMP or LLM-TAMP failure reasoning. The v4 evidence says no for this audit: the proposed method has higher abstraction-failure accuracy but lower combined-stress success than grounded geometric TAMP, and ablations that remove predicate refinement or use geometric TAMP only match or beat full on success/regret.
+A hostile reviewer would ask whether mechanics-aware abstraction auditing improves planning beyond grounded TAMP or LLM-TAMP failure reasoning. The v4.1 continuation evidence says no for this audit: the proposed method has higher abstraction-failure accuracy but lower combined-stress success than grounded geometric TAMP (0.552 vs 0.603), false refinement alarms are saturated, and ablations that remove predicate refinement, use geometric TAMP only, or remove the cost model match or beat full on success/regret.
 
 ## Honest Response
 

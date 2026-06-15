@@ -2,7 +2,7 @@
 
 Paper: 99 `embodied_abstraction_failure_modes`
 
-Version: v4
+Version: v4.1
 
 Gate verdict: KILL_ARCHIVE
 
@@ -17,7 +17,8 @@ The proposed abstraction-failure audit had to beat the strongest non-oracle base
 - Proposed method damage/unsafe rate: 0.150.
 - Proposed method false refinement alarm rate: 1.000.
 - Ablations matching or beating full: `geometric_tamp_only`, `minus_cost_model`, `minus_predicate_refinement`.
+- Fresh rerun status: reproduced on 2026-06-15.
 
 ## Verdict
 
-The proposed mechanism is not submission-ready. It improves diagnostics, but grounded mechanics-aware planning does better on the closed-loop success objective and the ablation pattern contradicts the full predicate-refinement claim.
+The proposed mechanism is not submission-ready. It improves diagnostics, but grounded mechanics-aware planning does better on the closed-loop success objective and the ablation pattern contradicts the full predicate-refinement/cost-model claim.

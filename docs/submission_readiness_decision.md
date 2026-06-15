@@ -6,7 +6,7 @@ ICLR main-conference readiness: NO.
 
 ## Evidence
 
-The v4 rebuild replaced the generic scaffold with an executable embodied-abstraction audit. The audit includes strong baselines, ablations, stress tests, uncertainty/calibration metrics, pairwise seed/task/family comparisons, and failure cases.
+The v4.1 continuation rerun re-executed the executable embodied-abstraction audit on 2026-06-15. The audit includes strong baselines, ablations, stress tests, uncertainty/calibration metrics, pairwise seed/task/family comparisons, and failure cases.
 
 Combined-stress headline:
 
@@ -17,9 +17,15 @@ Combined-stress headline:
 
 The proposed method has the best non-oracle abstraction-failure accuracy, but the diagnostic advantage does not translate into decisive closed-loop performance.
 
+Failed gates:
+
+- Success gate: `proposed_abstraction_failure_audit` loses to `grounded_geometric_tamp` on combined-stress task success, 0.552 vs 0.603.
+- False-alarm gate: false refinement alarm rate is 1.000.
+- Ablation gate: `minus_predicate_refinement`, `geometric_tamp_only`, and `minus_cost_model` match or beat full on success or regret.
+
 ## Terminal Reason
 
-The idea is killed because the new evidence is negative for the main claim. A paper arguing that abstraction-failure auditing improves embodied planning cannot be ICLR-main-target when grounded geometric TAMP has higher success and predicate-refinement/geometric ablations match or beat full on success/regret.
+The idea is killed because the fresh continuation evidence is negative for the main claim. A paper arguing that abstraction-failure auditing improves embodied planning cannot be ICLR-main-target when grounded geometric TAMP has higher success and predicate-refinement/geometric/cost-model ablations match or beat full on success/regret.
 
 ## Revival Condition
 

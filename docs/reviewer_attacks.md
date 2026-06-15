@@ -7,4 +7,4 @@
 - The benchmark is local and simulated; no hardware or high-fidelity validation is claimed.
 - Hostile prior work already covers VLA planning, neuro-symbolic predicates, active relational abstraction, failure reasoning, monitoring, and grounded TAMP.
 
-Response: accept the attacks and archive the paper. The v4 result is useful because it prevents an overstated submission.
+Response: accept the attacks and archive the paper. The v4.1 continuation result is useful because it prevents an overstated submission.
