@@ -19,6 +19,7 @@
 - [x] Figures in `figures/`
 - [x] `paper/main.tex`
 - [x] Canonical PDF target: `C:/Users/wangz/Downloads/99.pdf`
+- [x] 2026-06-15 continuation log: `C:/Users/wangz/robotics_massive_pool_paper_factory/logs/99_embodied_abstraction_failure_modes_continuation_rerun_20260615.log`
 
 ## Does Not Reproduce
 
@@ -27,4 +28,4 @@
 - [ ] Learned model checkpoints.
 - [ ] External embodied-planning benchmark comparisons.
 
-This is reproducible as a negative local evidence audit, not as a deployable robotics system paper.
+This is reproducible as a negative local v4.1 evidence audit, not as a deployable robotics system paper.

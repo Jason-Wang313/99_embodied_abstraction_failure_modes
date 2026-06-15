@@ -143,3 +143,7 @@ Otherwise mark `KILL_ARCHIVE`. An abstraction-failure audit that is matched or b
 ## Execution Result
 
 Executed on 2026-06-14. The rebuilt benchmark produced a terminal `KILL_ARCHIVE` decision. The proposed abstraction-failure audit improved abstraction-failure accuracy and mechanics-retention recall but did not beat `grounded_geometric_tamp` on combined-stress task success (0.552 vs 0.603), had excessive false refinement alarms, and was undermined by `geometric_tamp_only`, `minus_cost_model`, and `minus_predicate_refinement` ablations that matched or beat full on success/regret.
+
+## Continuation Result
+
+Re-executed on 2026-06-15 under the Paper 99 ICLR-main submission-readiness plan. The result remained `KILL_ARCHIVE`: `grounded_geometric_tamp` still beats the proposed method on combined-stress success (0.603 vs 0.552), the proposed false refinement alarm rate remains 1.000, and `minus_predicate_refinement`, `geometric_tamp_only`, and `minus_cost_model` still match or beat full on success or regret.
