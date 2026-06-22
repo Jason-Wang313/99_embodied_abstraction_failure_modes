@@ -1,13 +1,25 @@
-case_id,task,failure_family,seed,task_success,mechanical_violation_rate,damage_unsafe_rate,planning_regret_to_oracle,failure_mode
-1,tool_use_with_hidden_leverage,temporal_precondition_loss,0,0.690476,0.154762,0.130952,0.172491,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-2,deformable_object_packing,temporal_precondition_loss,6,0.452381,0.130952,0.178571,0.171574,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-3,tool_use_with_hidden_leverage,temporal_precondition_loss,1,0.452381,0.190476,0.166667,0.170286,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-4,deformable_object_packing,temporal_precondition_loss,1,0.404762,0.166667,0.095238,0.168406,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-5,tool_use_with_hidden_leverage,temporal_precondition_loss,6,0.392857,0.226190,0.059524,0.165837,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-6,container_insertion_clearance,temporal_precondition_loss,3,0.476190,0.166667,0.119048,0.165670,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-7,deformable_object_packing,temporal_precondition_loss,4,0.476190,0.190476,0.083333,0.164180,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-8,deformable_object_packing,temporal_precondition_loss,5,0.392857,0.107143,0.095238,0.162134,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-9,tool_use_with_hidden_leverage,temporal_precondition_loss,4,0.392857,0.178571,0.190476,0.162079,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-10,deformable_object_packing,temporal_precondition_loss,3,0.440476,0.166667,0.119048,0.161630,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-11,mobile_manipulation_with_occlusion,temporal_precondition_loss,1,0.488095,0.250000,0.107143,0.161374,the audit refines a mostly temporal nuisance when monitoring would be cheaper
-12,tool_use_with_hidden_leverage,temporal_precondition_loss,2,0.416667,0.154762,0.130952,0.161277,the audit refines a mostly temporal nuisance when monitoring would be cheaper
+case_id,split,task,failure_family,seed,task_success,mechanical_violation_rate,damage_unsafe_rate,planning_regret_to_oracle,failure_mode
+1,combined_adversarial_abstraction,tool_use_with_hidden_leverage,clearance_tolerance_collapse,1,0.117088,0.613663,0.431166,0.902022,grounded or physics-aware TAMP captures the mechanics with lower regret
+2,mechanics_ood_shift,container_insertion_clearance,clearance_tolerance_collapse,6,0.122136,0.607649,0.441373,0.898911,grounded or physics-aware TAMP captures the mechanics with lower regret
+3,combined_adversarial_abstraction,deformable_object_packing,clearance_tolerance_collapse,0,0.120528,0.604427,0.444209,0.896103,grounded or physics-aware TAMP captures the mechanics with lower regret
+4,combined_adversarial_abstraction,mobile_manipulation_with_occlusion,clearance_tolerance_collapse,8,0.133071,0.611994,0.426199,0.881255,grounded or physics-aware TAMP captures the mechanics with lower regret
+5,combined_adversarial_abstraction,tool_use_with_hidden_leverage,clearance_tolerance_collapse,0,0.141133,0.595322,0.420436,0.871582,grounded or physics-aware TAMP captures the mechanics with lower regret
+6,mechanics_ood_shift,deformable_object_packing,clearance_tolerance_collapse,5,0.155897,0.554075,0.465825,0.871003,grounded or physics-aware TAMP captures the mechanics with lower regret
+7,combined_adversarial_abstraction,tool_use_with_hidden_leverage,deformable_constraint_erasure,1,0.114090,0.581336,0.491486,0.868293,deformation risk remains high despite detecting the erased mechanics
+8,combined_adversarial_abstraction,tabletop_manipulation_with_support,clearance_tolerance_collapse,4,0.146143,0.591528,0.432156,0.867011,grounded or physics-aware TAMP captures the mechanics with lower regret
+9,combined_adversarial_abstraction,deformable_object_packing,deformable_constraint_erasure,8,0.115786,0.572601,0.506636,0.864829,deformation risk remains high despite detecting the erased mechanics
+10,combined_adversarial_abstraction,container_insertion_clearance,clearance_tolerance_collapse,7,0.137619,0.608013,0.414989,0.862953,grounded or physics-aware TAMP captures the mechanics with lower regret
+11,combined_adversarial_abstraction,articulated_fixture_assembly,clearance_tolerance_collapse,2,0.145324,0.589037,0.429508,0.862578,grounded or physics-aware TAMP captures the mechanics with lower regret
+12,combined_adversarial_abstraction,container_insertion_clearance,clearance_tolerance_collapse,5,0.144639,0.582522,0.444073,0.860033,grounded or physics-aware TAMP captures the mechanics with lower regret
+13,combined_adversarial_abstraction,deformable_object_packing,deformable_constraint_erasure,0,0.122811,0.557785,0.518633,0.858737,deformation risk remains high despite detecting the erased mechanics
+14,combined_adversarial_abstraction,mobile_manipulation_with_occlusion,clearance_tolerance_collapse,9,0.150992,0.600889,0.414098,0.857808,grounded or physics-aware TAMP captures the mechanics with lower regret
+15,combined_adversarial_abstraction,deformable_object_packing,erased_contact_force,0,0.133116,0.578455,0.457825,0.856226,mechanics detection does not offset refinement/query cost
+16,combined_adversarial_abstraction,tabletop_manipulation_with_support,clearance_tolerance_collapse,1,0.153258,0.593632,0.416932,0.855773,grounded or physics-aware TAMP captures the mechanics with lower regret
+17,combined_adversarial_abstraction,articulated_fixture_assembly,deformable_constraint_erasure,2,0.120512,0.580171,0.488646,0.854444,deformation risk remains high despite detecting the erased mechanics
+18,combined_adversarial_abstraction,deformable_object_packing,erased_contact_force,9,0.136171,0.574762,0.458642,0.852762,mechanics detection does not offset refinement/query cost
+19,combined_adversarial_abstraction,articulated_fixture_assembly,clearance_tolerance_collapse,9,0.155227,0.577055,0.432174,0.851353,grounded or physics-aware TAMP captures the mechanics with lower regret
+20,recovery_cost_pressure,deformable_object_packing,clearance_tolerance_collapse,7,0.158172,0.576980,0.425385,0.851151,grounded or physics-aware TAMP captures the mechanics with lower regret
+21,mechanics_ood_shift,tool_use_with_hidden_leverage,clearance_tolerance_collapse,7,0.172709,0.550896,0.438892,0.850385,grounded or physics-aware TAMP captures the mechanics with lower regret
+22,combined_adversarial_abstraction,tabletop_manipulation_with_support,clearance_tolerance_collapse,8,0.154484,0.606297,0.394624,0.850190,grounded or physics-aware TAMP captures the mechanics with lower regret
+23,combined_adversarial_abstraction,articulated_fixture_assembly,deformable_constraint_erasure,9,0.128365,0.555915,0.514368,0.849915,deformation risk remains high despite detecting the erased mechanics
+24,mechanics_ood_shift,deformable_object_packing,clearance_tolerance_collapse,0,0.172654,0.542232,0.456845,0.849511,grounded or physics-aware TAMP captures the mechanics with lower regret

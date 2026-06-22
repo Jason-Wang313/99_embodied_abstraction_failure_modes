@@ -1,14 +1,13 @@
 \begin{tabular}{lllllll}
 \toprule
-Baseline & Metric & Proposed & Baseline & Diff & CI95 & Winner \\
+Baseline & Metric & V5 & Baseline & Diff & CI95 & Winner \\
 \midrule
-llm\_tamp\_failure\_reasoning & task\_success & 0.5515063168124392 & 0.5823615160349854 & -0.030855199222546165 & 0.012839624344593802 & llm\_tamp\_failure\_reasoning \\
-llm\_tamp\_failure\_reasoning & mechanical\_violation\_rate & 0.20466472303206995 & 0.208357628765792 & -0.003692905733722062 & 0.011927385217305716 & statistical\_tie \\
-llm\_tamp\_failure\_reasoning & damage\_unsafe\_rate & 0.15034013605442176 & 0.16535471331389698 & -0.015014577259475222 & 0.009790743943340228 & proposed\_abstraction\_failure\_audit \\
-llm\_tamp\_failure\_reasoning & planning\_regret\_to\_oracle & 0.09136832519086874 & 0.09412326352528037 & -0.0027549383344116296 & 0.008874958431978469 & statistical\_tie \\
-grounded\_geometric\_tamp & task\_success & 0.5515063168124392 & 0.6030612244897959 & -0.051554907677356654 & 0.013180897893963992 & grounded\_geometric\_tamp \\
-grounded\_geometric\_tamp & mechanical\_violation\_rate & 0.20466472303206995 & 0.21997084548104956 & -0.01530612244897959 & 0.012612336748254311 & proposed\_abstraction\_failure\_audit \\
-grounded\_geometric\_tamp & damage\_unsafe\_rate & 0.15034013605442176 & 0.16846452866861028 & -0.018124392614188533 & 0.009247225020970017 & proposed\_abstraction\_failure\_audit \\
-grounded\_geometric\_tamp & planning\_regret\_to\_oracle & 0.09136832519086874 & 0.0993831725599148 & -0.008014847369046075 & 0.009237242501338946 & statistical\_tie \\
+physics\_aware\_tamp & task\_success & 0.287075 & 0.672623 & -0.385548 & 0.003690 & physics\_aware\_tamp \\
+physics\_aware\_tamp & mechanical\_violation\_rate & 0.459545 & 0.164499 & 0.295047 & 0.002877 & physics\_aware\_tamp \\
+physics\_aware\_tamp & damage\_unsafe\_rate & 0.370434 & 0.139346 & 0.231088 & 0.002528 & physics\_aware\_tamp \\
+physics\_aware\_tamp & planning\_regret\_to\_oracle & 0.638145 & 0.069816 & 0.568329 & 0.005770 & physics\_aware\_tamp \\
+physics\_aware\_tamp & robust\_utility & -0.333993 & 0.306262 & -0.640255 & 0.006224 & physics\_aware\_tamp \\
+physics\_aware\_tamp & abstraction\_failure\_accuracy & 0.581597 & 0.349479 & 0.232118 & 0.014502 & risk\_bounded\_abstraction\_failure\_audit\_v5 \\
+physics\_aware\_tamp & false\_refinement\_alarm\_rate & 0.000260 & 0.028819 & -0.028559 & 0.002529 & risk\_bounded\_abstraction\_failure\_audit\_v5 \\
 \bottomrule
 \end{tabular}

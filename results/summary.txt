@@ -1,46 +1,108 @@
-Paper 99: embodied_abstraction_failure_modes v4 evidence audit
+Paper 99: embodied_abstraction_failure_modes expanded v5 evidence audit
 Terminal decision: KILL_ARCHIVE
-Design: 5 tasks x 7 abstraction-failure families x 5 splits x 9 methods, 7 seeds, 84 episodes per seed/task/family/method group.
-Claim under test: mechanics-aware abstraction-failure auditing should improve robot planning beyond VLA, neuro-symbolic, relational-abstraction, TAMP, and monitoring baselines.
+ICLR main ready: no
+Design: 6 tasks x 8 abstraction-failure families x 8 splits x 14 methods, 10 seeds, 6 episodes per seed/task/failure/split/method cell.
+Claim under test: risk-bounded mechanics-aware abstraction auditing should improve robot planning beyond VLA, neuro-symbolic, relational-abstraction, LLM-TAMP, grounded TAMP, semantic MPC, and monitoring baselines.
 
-Combined-stress evidence:
-- oracle_mechanics_preserving_planner: success=0.616 +/- 0.007, viol=0.145, damage=0.114, failure_acc=1.000, recall=1.000, false_alarm=1.000, cost=0.349, regret=0.000
-- grounded_geometric_tamp: success=0.603 +/- 0.013, viol=0.220, damage=0.168, failure_acc=0.265, recall=0.868, false_alarm=0.271, cost=0.357, regret=0.099
-- llm_tamp_failure_reasoning: success=0.582 +/- 0.011, viol=0.208, damage=0.165, failure_acc=0.351, recall=0.883, false_alarm=0.336, cost=0.351, regret=0.094
-- proposed_abstraction_failure_audit: success=0.552 +/- 0.009, viol=0.205, damage=0.150, failure_acc=0.506, recall=1.000, false_alarm=1.000, cost=0.336, regret=0.091
-- active_relational_abstraction: success=0.546 +/- 0.008, viol=0.233, damage=0.166, failure_acc=0.393, recall=0.886, false_alarm=0.977, cost=0.295, regret=0.096
-- neuro_symbolic_predicate_planner: success=0.426 +/- 0.008, viol=0.331, damage=0.244, failure_acc=0.280, recall=0.614, false_alarm=0.197, cost=0.200, regret=0.233
-- runtime_monitor_replanner: success=0.384 +/- 0.009, viol=0.277, damage=0.195, failure_acc=0.226, recall=0.687, false_alarm=0.907, cost=0.245, regret=0.252
-- vla_direct_policy: success=0.309 +/- 0.010, viol=0.436, damage=0.316, failure_acc=0.129, recall=0.207, false_alarm=0.155, cost=0.111, regret=0.370
-- language_symbolic_planner: success=0.285 +/- 0.010, viol=0.486, damage=0.349, failure_acc=0.038, recall=0.053, false_alarm=0.018, cost=0.056, regret=0.390
+Row counts:
+- dataset_summary_rows: 23040
+- main_rollout_rows: 322560
+- main_group_rows: 53760
+- main_seed_metric_rows: 1120
+- main_metric_rows: 112
+- hard_seed_rows: 140
+- hard_metric_rows: 14
+- hard_pairwise_rows: 96
+- ablation_rollout_rows: 115200
+- ablation_seed_rows: 100
+- ablation_metric_rows: 10
+- stress_rollout_rows: 259200
+- stress_seed_rows: 900
+- stress_metric_rows: 90
+- fixed_risk_rows: 138240
+- fixed_risk_seed_rows: 480
+- fixed_risk_metric_rows: 48
+- fixed_risk_pairwise_rows: 56
+- negative_cases: 24
+
+Hard-aggregate evidence:
+- physics_aware_tamp: success=0.67262 +/- 0.00177, violation=0.16450, damage=0.13935, failure_acc=0.34948, warning=0.16936, false_alarm=0.02882, cost=0.40624, regret=0.06982, utility=0.30626
+- grounded_geometric_tamp: success=0.60103 +/- 0.00174, violation=0.21321, damage=0.18006, failure_acc=0.29227, warning=0.18655, false_alarm=0.02813, cost=0.34664, regret=0.13974, utility=0.20214
+- llm_tamp_failure_reasoning: success=0.57402 +/- 0.00206, violation=0.20738, damage=0.17587, failure_acc=0.38394, warning=0.26215, false_alarm=0.03411, cost=0.34537, regret=0.13391, utility=0.18206
+- semantic_model_predictive_planner: success=0.56528 +/- 0.00099, violation=0.21518, damage=0.18131, failure_acc=0.40720, warning=0.17153, false_alarm=0.02760, cost=0.35840, regret=0.14943, utility=0.15941
+- proposed_abstraction_failure_audit_v4: success=0.54907 +/- 0.00056, violation=0.19701, damage=0.16822, failure_acc=0.53524, warning=0.25373, false_alarm=0.05130, cost=0.33623, regret=0.13168, utility=0.17247
+- active_relational_abstraction: success=0.52058 +/- 0.00188, violation=0.21793, damage=0.18344, failure_acc=0.40816, warning=0.22786, false_alarm=0.12335, cost=0.30005, regret=0.16807, utility=0.13608
+- oracle_mechanics_preserving_planner: success=0.51808 +/- 0.00029, violation=0.19590, damage=0.16670, failure_acc=1.00000, warning=0.00061, false_alarm=0.00000, cost=0.25298, regret=0.12597, utility=0.17819
+- affordance_graph_planner: success=0.48274 +/- 0.00446, violation=0.27086, damage=0.22801, failure_acc=0.34687, warning=0.20877, false_alarm=0.02569, cost=0.29247, regret=0.26552, utility=0.03864
+- learned_failure_classifier_tamp: success=0.43551 +/- 0.00393, violation=0.32185, damage=0.26896, failure_acc=0.46918, warning=0.22674, false_alarm=0.00590, cost=0.27785, regret=0.36566, utility=-0.06150
+- neuro_symbolic_predicate_planner: success=0.40324 +/- 0.00378, violation=0.32833, damage=0.27096, failure_acc=0.28759, warning=0.19644, false_alarm=0.01597, cost=0.19915, regret=0.37008, utility=-0.06593
+- runtime_monitor_replanner: success=0.37425 +/- 0.00376, violation=0.29473, damage=0.23723, failure_acc=0.24141, warning=0.30165, false_alarm=0.00417, cost=0.22899, regret=0.36782, utility=-0.06367
+- vla_direct_policy: success=0.29050 +/- 0.00308, violation=0.43550, damage=0.35014, failure_acc=0.13568, warning=0.18316, false_alarm=0.00191, cost=0.10509, regret=0.56248, utility=-0.25833
+- risk_bounded_abstraction_failure_audit_v5: success=0.28708 +/- 0.00279, violation=0.45955, damage=0.37043, failure_acc=0.58160, warning=0.13950, false_alarm=0.00026, cost=0.20904, regret=0.63815, utility=-0.33399
+- language_symbolic_planner: success=0.27073 +/- 0.00105, violation=0.47225, damage=0.37936, failure_acc=0.03646, warning=0.12856, false_alarm=0.00000, cost=0.05397, regret=0.60314, utility=-0.29899
+
+Reference winners:
+- best_success_reference=physics_aware_tamp
+- best_violation_reference=physics_aware_tamp
+- best_damage_reference=physics_aware_tamp
+- best_regret_reference=physics_aware_tamp
+- best_utility_reference=physics_aware_tamp
+- best_warning_reference=runtime_monitor_replanner
+- max_stress_reference=physics_aware_tamp
+- fixed_risk_reference=grounded_geometric_tamp
+- v5_success=0.28708
+- v5_violation=0.45955
+- v5_damage=0.37043
+- v5_regret=0.63815
+- v5_utility=-0.33399
 
 Gate outcomes:
 - success_gate: False
-- safety_gate: True
-- diagnostic_gate: True
-- false_alarm_gate: False
+- violation_gate: False
+- damage_gate: False
+- regret_gate: False
+- utility_gate: False
+- diagnostic_gate: False
+- false_alarm_gate: True
+- cost_gate: True
 - ablation_gate: False
+- stress_gate: False
+- fixed_risk_gate: False
+- scope_gate: False
 
 Terminal rationale:
-- proposed does not beat strongest success baseline grounded_geometric_tamp (0.552 vs 0.603)
-- false refinement alarm rate is high (1.000)
-- ablations match or beat full on success/regret: geometric_tamp_only, minus_cost_model, minus_predicate_refinement
+- v5 hard success 0.28708 does not beat physics_aware_tamp 0.67262
+- v5 mechanical violation 0.45955 does not improve over physics_aware_tamp 0.16450
+- v5 damage 0.37043 does not improve over physics_aware_tamp 0.13935
+- v5 regret 0.63815 trails physics_aware_tamp 0.06982
+- v5 utility -0.33399 trails physics_aware_tamp 0.30626
+- v5 diagnostics do not clear the frozen accuracy/early-warning/false-alarm gate
+- ablations match or beat full: failure_classifier_only, grounded_tamp_only, monitor_only, no_calibration, no_cost_model, no_mechanics_taxonomy, no_predicate_refinement, no_recovery_feasibility_gate, v4_abstraction_audit_rules
+- maximum-stress robust utility is dominated by physics_aware_tamp
+- fixed-damage budget 0.05 is dominated by grounded_geometric_tamp or has insufficient coverage
+- scope gate fails because no real robot, accepted high-fidelity benchmark, external benchmark, or trained checkpoint evidence exists
 
 Ablation summary:
-- minus_predicate_refinement: success=0.586, damage=0.113, regret=0.074, failure_acc=0.505
-- geometric_tamp_only: success=0.549, damage=0.159, regret=0.111, failure_acc=0.506
-- minus_cost_model: success=0.530, damage=0.149, regret=0.122, failure_acc=0.505
-- full_abstraction_failure_audit: success=0.523, damage=0.151, regret=0.126, failure_acc=0.510
-- minus_calibration: success=0.517, damage=0.144, regret=0.138, failure_acc=0.508
-- monitor_only: success=0.362, damage=0.211, regret=0.266, failure_acc=0.502
-- minus_mechanics_taxonomy: success=0.359, damage=0.215, regret=0.310, failure_acc=0.284
+- no_predicate_refinement: success=0.57004, damage=0.17805, regret=0.13517, utility=0.17554, false_alarm=0.02049
+- grounded_tamp_only: success=0.56931, damage=0.21688, regret=0.22889, utility=0.13032, false_alarm=0.01441
+- v4_abstraction_audit_rules: success=0.55114, damage=0.16968, regret=0.14134, utility=0.16282, false_alarm=0.05365
+- no_cost_model: success=0.53091, damage=0.19597, regret=0.17169, utility=0.13246, false_alarm=0.02049
+- no_recovery_feasibility_gate: success=0.44486, damage=0.25137, regret=0.35424, utility=-0.05008, false_alarm=0.00755
+- no_calibration: success=0.41132, damage=0.28867, regret=0.42217, utility=-0.11802, false_alarm=0.00295
+- no_mechanics_taxonomy: success=0.33544, damage=0.33542, regret=0.54955, utility=-0.24540, false_alarm=0.00981
+- failure_classifier_only: success=0.33317, damage=0.33725, regret=0.55380, utility=-0.24965, false_alarm=0.00139
+- monitor_only: success=0.31133, damage=0.29886, regret=0.48923, utility=-0.18508, false_alarm=0.00026
+- full_risk_bounded_abstraction_failure_audit_v5: success=0.28708, damage=0.37043, regret=0.63815, utility=-0.33399, false_alarm=0.00026
 
-Representative failure cases:
-- tool_use_with_hidden_leverage / temporal_precondition_loss seed 0: success=0.6904761904761905, regret=0.17249121010935803; the audit refines a mostly temporal nuisance when monitoring would be cheaper
-- deformable_object_packing / temporal_precondition_loss seed 6: success=0.4523809523809524, regret=0.17157394844743945; the audit refines a mostly temporal nuisance when monitoring would be cheaper
-- tool_use_with_hidden_leverage / temporal_precondition_loss seed 1: success=0.4523809523809524, regret=0.17028593084879326; the audit refines a mostly temporal nuisance when monitoring would be cheaper
-- deformable_object_packing / temporal_precondition_loss seed 1: success=0.40476190476190477, regret=0.16840561810400784; the audit refines a mostly temporal nuisance when monitoring would be cheaper
-- tool_use_with_hidden_leverage / temporal_precondition_loss seed 6: success=0.39285714285714285, regret=0.16583651073323138; the audit refines a mostly temporal nuisance when monitoring would be cheaper
+Representative negative cases:
+- combined_adversarial_abstraction / tool_use_with_hidden_leverage / clearance_tolerance_collapse seed 1: success=0.11709, violation=0.61366, damage=0.43117, regret=0.90202; grounded or physics-aware TAMP captures the mechanics with lower regret
+- mechanics_ood_shift / container_insertion_clearance / clearance_tolerance_collapse seed 6: success=0.12214, violation=0.60765, damage=0.44137, regret=0.89891; grounded or physics-aware TAMP captures the mechanics with lower regret
+- combined_adversarial_abstraction / deformable_object_packing / clearance_tolerance_collapse seed 0: success=0.12053, violation=0.60443, damage=0.44421, regret=0.89610; grounded or physics-aware TAMP captures the mechanics with lower regret
+- combined_adversarial_abstraction / mobile_manipulation_with_occlusion / clearance_tolerance_collapse seed 8: success=0.13307, violation=0.61199, damage=0.42620, regret=0.88126; grounded or physics-aware TAMP captures the mechanics with lower regret
+- combined_adversarial_abstraction / tool_use_with_hidden_leverage / clearance_tolerance_collapse seed 0: success=0.14113, violation=0.59532, damage=0.42044, regret=0.87158; grounded or physics-aware TAMP captures the mechanics with lower regret
+- mechanics_ood_shift / deformable_object_packing / clearance_tolerance_collapse seed 5: success=0.15590, violation=0.55407, damage=0.46583, regret=0.87100; grounded or physics-aware TAMP captures the mechanics with lower regret
+- combined_adversarial_abstraction / tool_use_with_hidden_leverage / deformable_constraint_erasure seed 1: success=0.11409, violation=0.58134, damage=0.49149, regret=0.86829; deformation risk remains high despite detecting the erased mechanics
+- combined_adversarial_abstraction / tabletop_manipulation_with_support / clearance_tolerance_collapse seed 4: success=0.14614, violation=0.59153, damage=0.43216, regret=0.86701; grounded or physics-aware TAMP captures the mechanics with lower regret
 
-Paired comparison rows: 35
-No hardware validation is claimed; this is a local executable surrogate audit.
+No hardware validation is claimed; this is a local CPU-only executable surrogate audit.
+terminal=KILL_ARCHIVE
