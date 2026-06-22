@@ -2,32 +2,36 @@
 
 Paper: 99 `embodied_abstraction_failure_modes`
 
-Version: v4.1
+Version: v5-expanded
 
-## Attack 1: This is just TAMP with extra labels.
+## Attack 1: This is just worse TAMP with extra labels.
 
-Result: Fatal. `grounded_geometric_tamp` reaches 0.603 combined-stress success while the proposed method reaches 0.552.
+Result: Fatal. `physics_aware_tamp` reaches 0.67262 hard success while the proposed v5 method reaches 0.28708.
 
-## Attack 2: Predicate refinement is expensive and unnecessary.
+## Attack 2: The abstraction audit is less safe than grounded planning.
 
-Result: Fatal. `minus_predicate_refinement` beats full on success and regret.
+Result: Fatal. Proposed v5 has 0.45955 mechanical violation and 0.37043 damage, compared with 0.16450 violation and 0.13935 damage for `physics_aware_tamp`.
 
-## Attack 3: The cost model is doing harm.
+## Attack 3: The cost and risk machinery does not improve planning utility.
 
-Result: Fatal. `minus_cost_model` matches or beats full on success/regret, and `minus_predicate_refinement` is stronger than full on both.
+Result: Fatal. Proposed v5 has 0.63815 regret and -0.33399 robust utility, compared with 0.06982 regret and 0.30626 robust utility for `physics_aware_tamp`.
 
-## Attack 4: Monitoring or TAMP handles failures without a mechanics taxonomy.
+## Attack 4: The proposed components are not necessary.
 
-Result: Mixed. Monitor-only is weak, but geometric TAMP is strong enough to undermine the proposed mechanism.
+Result: Fatal. `failure_classifier_only`, `grounded_tamp_only`, `monitor_only`, `no_calibration`, `no_cost_model`, `no_mechanics_taxonomy`, `no_predicate_refinement`, `no_recovery_feasibility_gate`, and `v4_abstraction_audit_rules` all match or beat full v5 on at least one decisive objective.
 
-## Attack 5: Diagnostics do not equal robot performance.
+## Attack 5: Maximum-stress and fixed-risk deployment reverse the claim.
 
-Result: Fatal. The proposed method has best failure accuracy and recall, but loses task success to grounded TAMP.
+Result: Fatal. Maximum-stress robust utility is dominated by `physics_aware_tamp`, and fixed-damage-budget deployment is dominated by `grounded_geometric_tamp` or lacks useful coverage.
 
-## Attack 6: No real robot or high-fidelity validation exists.
+## Attack 6: Diagnostics do not equal robot performance.
 
-Result: Still true. This prevents main-conference readiness even if the local result had been positive.
+Result: Fatal. Diagnostic evidence does not translate into closed-loop success, safety, regret, or robust utility.
+
+## Attack 7: No real robot or high-fidelity validation exists.
+
+Result: Fatal for main-conference readiness. This remains true even if the local surrogate had been positive.
 
 ## Terminal Action
 
-Mark `KILL_ARCHIVE`. Do not submit as an ICLR-main paper. The 2026-06-15 continuation rerun did not change the terminal decision.
+Mark `KILL_ARCHIVE`. Do not submit as an ICLR-main paper. The 2026-06-22 expanded v5 audit strengthens the negative terminal decision.
